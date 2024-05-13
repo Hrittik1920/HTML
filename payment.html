@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>
+    Payment system
+</title>
+<style>
+    #box1 {
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        text-decoration: double;
+        font-size: 30px;
+        height: 140px;
+        background-image: linear-gradient(skyblue,pink);
+        width: 1200px;
+        margin-top: 60px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-color: black;
+        border-style: ridge;
+        border-width: 1px;
+
+
+    }
+
+    #box2 {
+        margin: auto;
+        padding: 20px;
+        font-size: 20px;
+        background-color: rgba(154, 241, 238, 0.786);
+        width: 1200px;
+        height: 1000px;
+        margin-top: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-color: black;
+        border-style: ridge;
+        border-width: 1px;
+    }
+    #gendiv{
+        height: 80px;
+        margin-top: -320px;
+    }
+
+    #mb {
+        margin-left: 0px;
+        background-image: white;
+        background-color: white;
+        text-align: left;
+        padding: 10px;
+        height: 16px;
+        width: 110px;
+        border-radius: 5px;
+        border-color: rgb(15, 13, 13);
+        border-style: ridge;
+        border-width: 1px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: relative;
+        left: 90px;
+        top: -30px;
+    }
+
+    #fb {
+        background-image: white;
+        background-color: white;
+        text-align: left;
+        padding: 10px;
+        height: 16px;
+        width: 110px;
+        border-radius: 5px;
+        border-color: rgb(15, 13, 13);
+        border-style: ridge;
+        border-width: 1px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: relative;
+        left: 225px;
+        top: -68px;
+    }
+
+    #cb {
+        background-image: white;
+        background-color: white;
+        text-align: left;
+        padding: 10px;
+        height: 16px;
+        width: 110px;
+        align-self: center;
+        border-radius: 5px;
+        border-color: rgb(15, 13, 13);
+        border-style: ridge;
+        border-width: 1px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: relative;
+        left: 360px;
+        top: -106px
+    }
+    #n1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 22px;
+    }
+    #name{
+        border-radius: 5px;
+        border-color: rgb(15, 13, 13);
+        border-style: ridge;
+        border-width: 1px;
+        height: 20px;
+        width: 250px;
+        font-size: 26px;
+        padding: 10px;
+        padding-left: 15px;
+        margin-top: 10px;
+        
+    }
+    p5{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 22px;
+    }
+    .textarea{
+        height: 80px;
+        width: 250px;
+        font-size: 20px;
+    }
+    #email{
+        border-radius: 5px;
+        border-color: rgb(15, 13, 13);
+        border-style: ridge;
+        border-width: 1px;
+        height: 20px;
+        width: 350px;
+        font-size: 26px;
+        padding: 10px;
+        padding-left: 15px;
+        margin-top: 10px;
+    }
+    #pin{
+        border-radius: 5px;
+        border-color: rgb(15, 13, 13);
+        border-style: ridge;
+        border-width: 1px;
+        height: 20px;
+        width: 250px;
+        font-size: 26px;
+        padding: 10px;
+        padding-left: 15px;
+        margin-top: 10px;
+    }
+    #card1{
+        border-radius: 5px;
+        border-color: rgb(15, 13, 13);
+        border-style: ridge;
+        border-width: 1px;
+        height: 20px;
+        width: 250px;
+        font-size: 26px;
+        padding: 10px;
+        padding-left: 15px;
+        margin-top: 10px;
+    }
+    #type{
+        border-radius: 5px;
+        border-color: rgb(15, 13, 13);
+        border-style: ridge;
+        border-width: 1px;
+        height: 45px;
+        width: 280px;
+        font-size: 20px;
+        padding: 10px;
+        padding-left: 15px;
+        margin-top: 10px;
+    }
+    #reset{
+        padding: 10px;
+        margin-left: 70px;
+        display: inline-block;
+        border-radius: 20px;
+        background-color: skyblue;
+        border-style: solid;
+        border-width: 3px;
+        font-size: 24px;
+        line-height: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:black;
+        position: relative;
+        left: 300px;
+        width: 120px;
+        cursor: pointer;
+        transition: 300ms;
+    }
+    #reset:after{
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        content: '';
+        box-sizing: content-box;
+        box-shadow: 0 0 0 3px #fff;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 300ms;
+    }
+    #reset:hover{
+        background-color: palegreen;
+        color: blue;
+        font-size: 30px;
+        border-radius: 30px;
+        border-style: solid;
+        border-width: 6px;
+        
+    }
+    #reset:hover:after{
+        opacity: 1;
+        transform: scale(1.15);
+    }
+    #submit{
+        padding: 10px;
+        margin-left: 130px;
+        display: inline-block;
+        border-radius: 20px;
+        background-color: skyblue;
+        border-style: solid;
+        border-width: 3px;
+        font-size: 24px;
+        line-height: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:black;
+        position: relative;
+        left: 300px;
+        width: 160px;
+        cursor: pointer;
+        transition: 300ms;
+
+    }
+    #submit:hover{
+        background-color: palegreen;
+        color: blue;
+        font-size: 30px;
+        border-radius: 30px;
+        border-style: solid;
+        border-width: 6px;
+
+    }
+    h2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #card{
+        border-radius: 5px;
+        border-color: rgb(15, 13, 13);
+        border-style: ridge;
+        border-width: 1px;
+        height: 20px;
+        width: 400px;
+        font-size: 26px;
+        padding: 10px;
+        padding-left: 15px;
+        margin-top: 10px;
+
+    }
+    #cvv{
+        
+        border-radius: 5px;
+        border-color: rgb(15, 13, 13);
+        border-style: ridge;
+        border-width: 1px;
+        height: 20px;
+        width: 80px;
+        font-size: 26px;
+        padding: 10px;
+        padding-left: 15px;
+        margin-top: 10px;
+    }
+    #image{
+
+        margin-top: -480px;
+        width: 250px;
+        position: relative;
+        left: 280px;
+        top: -200px;
+        height: 200px;
+    }    
+    p6{
+        text-align: center;
+        margin-left: 220px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 22px;
+    
+
+    }
+    #img{
+        width: 270px;
+        margin-left: 200px;
+        margin-top: -100px;
+        height: 400px;
+    }
+    #imo{
+        width: 300px;
+        margin-left: 500px;
+    }
+    p{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 60px;
+        color: rgba(32, 137, 44, 0.723);
+    }
+    </style>
+
+<body>
+    <div>
+        <div id="box1">
+            <p><u>Payment Form</u></p>
+        </div>
+        <div id="box2">
+            <form action="mailto: 16aryansin@gmail.com" method="post">
+                <h2><b><u>User Information:</u></b></h2><br>
+                <label for="name" id="n1">NAME: </label>
+                <input type="text" id="name" value="" placeholder="Name" required>
+                <div id="imo"><img src="https://devathon.com/wp-content/uploads/2020/02/Top-10-Payment-Gateways-Devathon.png" id="img"></div>
+                <br><div id="gendiv">
+                <br><p5>Gender:</p5>
+                <div id="mb">
+                    <input type="radio" name="Gender" value="Male" id="Gender-m">
+                    <label for="Gender-m" class="gen" id="newgen">Male</label>
+                </div>
+                <div id="fb">
+                    <input type="radio" name="Gender" value="Female" id="Gender-f">
+                    <label for="Gender-f" class="gen">Female</label>
+                </div>
+                <div id="cb">
+                    <input type="radio" name="Gender" value="custom" id="Gender-c">
+                    <label for="Gender-c" class="gen">Custom</label>
+                </div><br></div>
+                <p5 id="ad">Addresss: <textarea class="textarea"></textarea>
+                </p5><br>
+                <p5>Email:</p5>
+                <input type="email" id="email" value="" placeholder="Enter Email" required>
+                <br>
+                <p5>Pincode:</p5>
+                <input type="number" id="pin" value="" placeholder="Pincode" required><br>
+                <br>
+                <hr style: color="black" size="0.1px">
+                <h2><u>Payment Information:</u></h2><br>
+                <p5>Card type :</p5>
+                <select name="type" id="type">
+                    <option selected>----Select card type----</option>
+                    <option>Credit card</option>
+                    <option>Debit card</option>
+                </select><br><br>
+                <p5>Card number:</p5>
+                <input type="tel" name="cardno" id="card" value="" minlength="16" maxlength="16" placeholder="XXXX XXXX XXXX XXXX" required>
+                <br><br>
+                <p5>Expiry date:</p5>
+                <input type="tel" pattern="\d*" placeholder="MM/YY" maxlength="4" name="expiry" id="card1" value="" required>
+                <br><br>
+                <p5>CVV:</p5>
+                <input type="tel" name="cvv" id="cvv" value="" minlength="3" maxlength="3" placeholder="XXX" required>
+                <br><br><input type="reset" name="reset" id="reset" value="Reset">
+                <input type="submit" name="submit" id="submit" value="Pay Now">
+                <image src="https://arropay.in/gallery_gen/b2a77e40aa69f0b5ffbbc568460d3777.png"  id="image" ></image>
+
+
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

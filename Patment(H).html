@@ -1,0 +1,129 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 15px 30px;
+            font-size: 17px;
+            padding: 8px;
+        }
+
+        .container {
+            background-color: skyblue;
+            padding: 5px 20px 15px 20px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"], select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid black;
+        }
+
+        fieldset {
+            background: white;
+            border: 1px solid black;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(19, 158, 135);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            p
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(23, 103, 156);
+        }
+
+        #b1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="mailto: hrittiksingh1920@gmail.com" method="post">
+            <div id="b1">
+                <h1>Payment Form</h1>
+            </div>
+            <hr style="border-color: black;">
+            <div class="b2">
+                <h3>User Information</h3>
+                <p>
+                    Name: *
+                    <input type="text" placeholder="username">
+                </p>
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label for="male">
+                        <input type="radio" value="Male" name="gender" id="male">Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" value="female" name="gender" id="female">Female
+                    </label>
+                </fieldset>
+                <p>
+                    Address:
+                    <br>
+                    <textarea placeholder="Enter your address" rows="6" cols="100"></textarea>
+                </p>
+                <p>
+                    Email:
+                    <input type="email" name="email" id="email" required placeholder="hrk@gmail.com">
+                </p>
+                <p>
+                    Pincode:
+                    <input type="number" name="pincode" id="pincode" placeholder="123456">
+                </p>
+                <h3>Payment Information</h3>
+                <p>
+                    Card Accepted:
+                    <img src="" alt="">
+                </p>
+                <p>
+                    Card Type:
+                    <select name="card type" id="card type" required>
+                        <option value="">--Select Card Type--</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Master Card</option>
+                        <option value="rupay">Rupay</option>
+                    </select>
+                </p>
+                <P>
+                    Card Number:
+                    <input type="number" name="cardnumber" id="cardnumber" required placeholder="1111-2222-3333-4444">
+                </P>
+                <p>
+                    Expiration Date:
+                    <input type="number" name="expdate" id="expdate" required placeholder="MM/YY">
+                </p>
+                <P>
+                    CVV:
+                    <input type="tel" name="cvv" id="cvv" minlength="3" maxlength="3" placeholder="123" required>
+                </P>
+                <input type="submit" value="Pay Now">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

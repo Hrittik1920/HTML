@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Specificity</title>
+    <style>
+        /* ul#summer li.favorite{
+            color: red;
+            font-weight: bold;
+        }
+        ul#summer li{
+            color: aqua;
+            font-weight: normal;
+        } */
+        /* .favorite{
+            color: hotpink;
+        }
+        .favorite{
+            color: blueviolet;
+        } */
+        .class3 a{
+            color: skyblue !important;
+        }
+        body{
+            color: blue;
+        }
+        .class1 a{
+            color: inherit;
+        }
+        .class2 a{
+            color: initial;
+        }
+        .class3 a{
+            color: unset;
+        }
+    </style>
+    <link rel="stylesheet" href="specificity.css">
+</head>
+<body>
+    <!-- <ul id="summer">
+        <li>Moumtain Dew</li>
+        <li class="favorite">Sprite</li>
+        <li>pinku</li>
+    </ul> -->
+    <ul>
+        <li>Default <a href="">link</a> color</li>
+        <li class="class1">Inherited <a href="">link</a> color</li>
+        <li class="class2">Initial <a href="">link</a> color</li>
+        <li class="class3">Unset <a href="" style="color: red;">link</a> color</li>
+    </ul>
+</body>
+</html>
